@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     openssh-server
 
 # Create a directory for the SSH daemon
-RUN mkdir /var/run/sshd
+RUN mkdir -p /var/run/sshd
 
 # Set up password for root user (change 'rootpassword' to a secure password)
 RUN echo 'root:rootpassword' | chpasswd
